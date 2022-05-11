@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.acqua-green {
+  color: #00bfb2;
+}
+
+.padding-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.light-gray {
+  color: #c9c9c9;
+}
+
+.index-bg {
+  background-image: url("../imgs/index-bg.png") !important;
+}
+
+.credentials-bg {
+  background-image: url("../imgs/credentials-bg.png") !important;
+}
+
+.bg-image {
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.title-divider {
+  background: #00bfb2;
+  width: 35px;
+  height: 7px;
+}
+
+/* Font */
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Font Weights */
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Font Sizes */
+
+.size-14 {
+  font-size: 14px;
+}
+
+.size-16 {
+  font-size: 16px;
+}
+
+.size-20 {
+  font-size: 20px;
+}
+
+.size-24 {
+  font-size: 24px;
+}
+
+.size-28 {
+  font-size: 28px;
+}
+
+.size-32 {
+  font-size: 32px;
+}
+
+.size-36 {
+  font-size: 36px;
+}
+
+.size-40 {
+  font-size: 40px;
+}
+
+.size-54 {
+  font-size: 54px;
+}
+
+.size-84 {
+  font-size: 84px;
+}
+
+/* Letter Spacing */
+
+.ls-10 {
+  letter-spacing: 0.1em;
+}
+
+/* Line Height */
+
+.lh-0 {
+  line-height: 0;
+}
+
+/* Custom Padding */
+
+.p-6 {
+  padding: 4rem !important;
+}
+
+/* Custom Width */
+
+.width-25rem {
+  width: 2.5rem;
+}
+
+
+/* Hover Effects */
+
+.titles:hover {
+  color: #00bfb2;
+}
