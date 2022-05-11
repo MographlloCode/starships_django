@@ -72,8 +72,11 @@ class Movimentacao(models.Model):
     cliente_movimentacao = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     conteiner_movimentacao = models.ForeignKey(Conteiner, on_delete=models.CASCADE)
     tipo_movimentacao = models.CharField(max_length=16, choices=TIPO)
-    data_hora_início = models.DateTimeField()
+    data_hora_inicio = models.DateTimeField()
     data_hora_fim = models.DateTimeField()
 
     class Meta:
         db_table = 'movimentacao'
+
+    def __str__(self):
+        return (f'Movimentação do Contêiner {self.conteiner_movimentacao}')

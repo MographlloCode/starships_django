@@ -13,10 +13,10 @@
             </div>
             <div class="col-10 d-flex justify-content-center">
                 <ul class="navbar-nav p-4 inter">
-                    <li class="px-4 semi-bold"><a class="text-decoration-none text-dark" href="{% url 'listar-clientes' %}">Clientes</a></li>
-                    <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-conteiners' %}">Contêiners</a></li>
+                    <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-clientes' %}">Clientes</a></li>
+                    <li class="px-4 semi-bold"><a class="text-decoration-none text-dark" href="{% url 'listar-conteiners' %}">Contêiners</a></li>
                     <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-movimentacoes' %}">Movimentações</a></li>
-                    <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-relatorios' %}">Relatórios</a></li>
+                    {% comment %} <!-- <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-relatorios' %}">Relatórios</a></li> --> {% endcomment %}
                 </ul>
             </div>
             <div class="col-1 d-flex justify-content-end">
@@ -39,7 +39,7 @@
                     <dd class="col-sm-3 inter size-24 text-end light-gray">Nome do Cliente</dd>
                     <dt class="col-sm-9 inter size-32 semi-bold">{{ object.cliente_conteiner }}</dt>
                     <dd class="col-sm-3 inter size-24 text-end light-gray">Número do Contêiner</dd>
-                    <dt class="col-sm-9 inter size-32 semi-bold">{{ object.numero_cliente }}</dt>
+                    <dt class="col-sm-9 inter size-32 semi-bold">{{ object.numero_conteiner }}</dt>
                     <dd class="col-sm-3 inter size-24 text-end light-gray">Tipo</dd>
                     <dt class="col-sm-9 inter size-32 semi-bold">{{ object.tipo_conteiner }}</dt>
                     <dd class="col-sm-3 inter size-24 text-end light-gray">Status</dd>

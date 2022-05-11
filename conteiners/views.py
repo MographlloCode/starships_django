@@ -1,8 +1,13 @@
-from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
+from django.views.generic import TemplateView, ListView, CreateView, UpdateView, DetailView, DeleteView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.urls import reverse_lazy
 
 from .models import *
+
+# Home
+
+class HomeTemplateView(TemplateView):
+    template_name = 'index.html'
 
 # Views Cliente
 
@@ -64,7 +69,7 @@ class ExcluirClientesViewset(DeleteView):
 class CriarConteinersViewset(CreateView):
     ''' Viewset para realizar a criação de novos conteiners '''
     model = Conteiner
-    template_name = 'conteiners/cadastrar_conteiner.html'
+    template_name = 'conteiners/cadastrar_conteiners.html'
     fields = {'cliente_conteiner','numero_conteiner','tipo_conteiner','status_conteiner','categoria_conteiner'}
     success_url = reverse_lazy('listar-conteiners')
 
@@ -126,7 +131,7 @@ class CriarMovimentacoesViewset(CreateView):
 class ListarMovimentacoesViewset(ListView):
     ''' Viewset criada para realizar a listagem de conteiners (com paginação) '''
     model = Movimentacao
-    template_name = 'movimentacoes/conteiners.html'
+    template_name = 'movimentacoes/movimentacoes.html'
     context_object_name = 'movimentacoes'
     paginate_by = 10
 
