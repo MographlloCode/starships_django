@@ -1,0 +1,41 @@
+{% extends '__base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Navbar e Título -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light align-content-between">
+        <div class="row vw-100 justify-content-between">
+            <div class="col-1">
+                <div class="d-flex flex-column">
+                    <a class="titles acqua-green text-decoration-none px-3 text-uppercase inter size-40 bold" href="{% url 'listar-conteiners' %}">Contêiners</a>
+                    <div class="ms-3 title-divider"></div>
+                </div>
+            </div>
+            <div class="col-10 d-flex justify-content-center">
+                <ul class="navbar-nav p-4 inter">
+                    <li class="px-4 semi-bold"><a class="text-decoration-none text-dark" href="{% url 'listar-clientes' %}">Clientes</a></li>
+                    <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-conteiners' %}">Contêiners</a></li>
+                    <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-movimentacoes' %}">Movimentações</a></li>
+                    <li class="px-4"><a class="text-decoration-none text-dark" href="{% url 'listar-relatorios' %}">Relatórios</a></li>
+                </ul>
+            </div>
+            <div class="col-1 d-flex justify-content-end">
+                <img class="width-25rem" src="{% static 'imgs/green-user.svg' %}">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo -->
+
+    <div class="ms-4 mt-4 row justify-content-between">
+        <div class="col-3">
+            <p class="inter size-40 semi-bold">Cadastrar Contêiner</p>
+        </div>
+    </div>
+    <div class="ms-4 row">
+        <div class="col-6">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button id="cadastro_contêiner" type="submit" class="mt-5 shadow-sm btn btn-secondary px-4 inter">Cadastrar</button>
+{% endblock %}

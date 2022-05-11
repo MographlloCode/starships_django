@@ -7,7 +7,7 @@
         <div class="row vw-100 justify-content-between">
             <div class="col-1">
                 <div class="d-flex flex-column">
-                    <a class="titles acqua-green text-decoration-none px-3 text-uppercase inter size-40 bold" href="{% url 'listar-clientes' %}">Clientes</a>
+                    <a class="titles acqua-green text-decoration-none px-3 text-uppercase inter size-40 bold" href="{% url 'listar-conteiners' %}">Contêiners</a>
                     <div class="ms-3 title-divider"></div>
                 </div>
             </div>
@@ -32,30 +32,36 @@
                 <thead>
                     <tr>
                         <th class="py-3 px-5 size-24 inter light light-gray">Nome do Cliente</th>
-                        <th class="py-3 px-5 size-24 inter light light-gray">ID do Cliente</th>
+                        <th class="py-3 px-5 size-24 inter light light-gray">Número do Contêiner</th>
+                        <th class="py-3 px-5 size-24 inter light light-gray">Tipo</th>
+                        <th class="py-3 px-5 size-24 inter light light-gray">Status</th>
+                        <th class="py-3 px-5 size-24 inter light light-gray">Categoria</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for cliente in clientes %}
+                    {% for conteiner in conteiners %}
                     <tr>
-                        <th class="px-5 size-24 inter regular">{{ cliente.nome_do_cliente }}</th>
-                        <th class="px-5 size-24 inter regular">{{ cliente.id_do_cliente }}</th>
+                        <th class="px-5 size-24 inter regular">{{ conteiner.cliente_conteiner }}</th>
+                        <th class="px-5 size-24 inter regular">{{ conteiner.numero_conteiner }}</th>
+                        <th class="px-5 size-24 inter regular">{{ conteiner.tipo_conteiner }}</th>
+                        <th class="px-5 size-24 inter regular">{{ conteiner.status_conteiner }}</th>
+                        <th class="px-5 size-24 inter regular">{{ conteiner.categoria_conteiner }}</th>
                         <th class="size-24 inter semi-bold">
-                            <a class="text-decoration-none text-dark" href="{% url 'detalhar-clientes' cliente.id %}">
+                            <a class="text-decoration-none text-dark" href="{% url 'detalhar-conteiners' conteiner.id %}">
                                 <button class="btn btn-link p-0">
                                     <img class="" src="{% static 'imgs/detail-btn.svg' %}">
                                 </button>
                             </a>
                         </th>
                         <th class="size-24 inter semi-bold">
-                            <a class="text-decoration-none text-dark" href="{% url 'atualizar-clientes' cliente.id %}">
+                            <a class="text-decoration-none text-dark" href="{% url 'atualizar-conteiners' conteiner.id %}">
                                 <button class="btn btn-link p-0">
                                     <img class="" src="{% static 'imgs/edit-btn.svg' %}">
                                 </button>
                             </a>
                         </th>
                         <th class="p-0 size-24 inter semi-bold">
-                            <a class="text-decoration-none text-dark" href="{% url 'excluir-clientes' cliente.id %}">
+                            <a class="text-decoration-none text-dark" href="{% url 'excluir-conteiners' conteiner.id %}">
                                 <button class="btn btn-link p-0">
                                     <img class="" src="{% static 'imgs/delete-btn.svg' %}">
                                 </button>
@@ -70,7 +76,7 @@
             {% endif %}
             <div class="row mt-3 justify-content-center">
                 <div class="col-3">
-                    <a href="{% url 'criar-clientes' %}"><button class="btn btn-secondary inter semi-bold size-20">Criar cliente</button>
+                    <a href="{% url 'criar-clientes' %}"><button class="btn btn-secondary inter semi-bold size-20">Criar contêiner</button>
                 </div>
             </div>
         </div>
